@@ -26,6 +26,10 @@ import joblib
 # ============================================================
 
 app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return {"message": "Server is running"}
 CORS(app)
 
 # Ganti SECRET KEY pada production
